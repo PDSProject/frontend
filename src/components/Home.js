@@ -19,6 +19,24 @@ function Home() {
             <br />
             <Navbar className="bg-body-tertiary">
                 <Container>
+                    <Navbar.Brand href="/searchitems">Search Items By Category</Navbar.Brand>
+                </Container>
+            </Navbar>
+            <br />
+            <Navbar className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand href="/itemsatlocation">Find Items By Location</Navbar.Brand>
+                </Container>
+            </Navbar>
+            <br />
+            <Navbar className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand href="/deleteitem">Delete Item By ID</Navbar.Brand>
+                </Container>
+            </Navbar>
+            <br />
+            <Navbar className="bg-body-tertiary">
+                <Container>
                     <Navbar.Brand href="/allavailableitems">All Available Items</Navbar.Brand>
                 </Container>
             </Navbar>
@@ -32,6 +50,12 @@ function Home() {
             <Navbar className="bg-body-tertiary">
                 <Container>
                     <Navbar.Brand href="/acceptdonation">Accept Donation</Navbar.Brand>
+                </Container>
+            </Navbar>
+            <br />
+            <Navbar className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand href="/getdonor">Get Donor Info</Navbar.Brand>
                 </Container>
             </Navbar>
             <br />

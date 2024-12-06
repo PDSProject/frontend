@@ -9,15 +9,16 @@ function Login() {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-
         axios.post('http://localhost:8000/login', { userName, password })
             .then(
-                localStorage.setItem('userName', userName),
-                navigate('/home')
+                () => {
+                    localStorage.setItem('userName', userName)
+                    navigate('/home')
+                }
             )
             .catch(err => alert(err.response.data));
-    };
 
+    }
     return (
         <div className='container'>
             <div className='mt-5'></div>

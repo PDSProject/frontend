@@ -14,7 +14,7 @@ const ItemsAtLocation = () => {
             });
             setResults(response.data);
         } catch (error) {
-            console.error('Error fetching items:', error);
+            alert(error.response.data);
         }
     };
 
@@ -43,34 +43,37 @@ const ItemsAtLocation = () => {
                 <button type="submit">Search</button>
             </form>
             <div>
-                <h3>Search Results:</h3>
                 {results.length > 0 ? (
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Item ID</th>
-                                <th>Description</th>
-                                <th>Color</th>
-                                <th>Is New</th>
-                                <th>Room Number</th>
-                                <th>Shelf Number</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {results.map((item) => (
-                                <tr key={item.ItemID}>
-                                    <td>{item.ItemID}</td>
-                                    <td>{item.iDescription}</td>
-                                    <td>{item.color}</td>
-                                    <td>{item.isNew ? 'Yes' : 'No'}</td>
-                                    <td>{item.roomNum}</td>
-                                    <td>{item.shelfNum}</td>
+                    <div>
+                        <h3>Search Results:</h3>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Item ID</th>
+                                    <th>Description</th>
+                                    <th>Color</th>
+                                    <th>Is New</th>
+                                    <th>Room Number</th>
+                                    <th>Shelf Number</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {results.map((item) => (
+                                    <tr key={item.ItemID}>
+                                        <td>{item.ItemID}</td>
+                                        <td>{item.iDescription}</td>
+                                        <td>{item.color}</td>
+                                        <td>{item.isNew ? 'Yes' : 'No'}</td>
+                                        <td>{item.roomNum}</td>
+                                        <td>{item.shelfNum}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 ) : (
-                    <p>No items found at the specified location.</p>
+                    <></>
                 )}
             </div>
         </div>

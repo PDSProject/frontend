@@ -12,6 +12,9 @@ import DeleteItem from './components/DeleteItem';
 import GetDonor from './components/GetDonor';
 import SearchItems from './components/SearchItems';
 import ItemsAtLocation from './components/ItemsAtLocation';
+import MyOrder from './components/MyOrder';
+import AddOrder from './components/AddOrder';
+import PrepareOrder from './components/PrepareOrder';
 
 function App() {
 
@@ -25,6 +28,9 @@ function App() {
         <Route path="/deleteitem" element={<DeleteItem />} />
         <Route path="/getdonor" element={<GetDonor />} />
         <Route path="/findorder" element={<FindOrder />} />
+        <Route path="/myorder" element={<MyOrder />} />
+        <Route path="/addtoorder" element={<AddOrder />} />
+        <Route path="/prepareorder" element={<PrepareOrder />} />
         <Route path="/allavailableitems" element={<AllAvailable />} />
         <Route path="/startorder" element={<StartOrder />} />
         <Route path="/acceptdonation" element={<AcceptDonation />} />

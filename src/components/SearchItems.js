@@ -14,7 +14,7 @@ const SearchItems = () => {
             });
             setResults(response.data);
         } catch (error) {
-            console.error('Error fetching items:', error);
+            alert(error.response.data);
         }
     };
 
@@ -42,34 +42,38 @@ const SearchItems = () => {
                 </div>
                 <button type="submit">Search</button>
             </form>
-            <div>
-                <h3>Search Results:</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item ID</th>
-                            <th>Description</th>
-                            <th>Color</th>
-                            <th>Is New</th>
-                            <th>Main Category</th>
-                            <th>Sub Category</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {results.map((item) => (
-                            <tr key={item.ItemID}>
-                                <td>{item.ItemID}</td>
-                                <td>{item.iDescription}</td>
-                                <td>{item.color}</td>
-                                <td>{item.isNew ? 'Yes' : 'No'}</td>
-                                <td>{item.mainCategory}</td>
-                                <td>{item.subCategory}</td>
+            {results.length > 0 ? (
+                <div>
+                    <h3>Search Results:</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item ID</th>
+                                <th>Description</th>
+                                <th>Color</th>
+                                <th>Is New</th>
+                                <th>Main Category</th>
+                                <th>Sub Category</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
 
-            </div>
+                        <tbody>
+                            {results.map((item) => (
+                                <tr key={item.ItemID}>
+                                    <td>{item.ItemID}</td>
+                                    <td>{item.iDescription}</td>
+                                    <td>{item.color}</td>
+                                    <td>{item.isNew ? 'Yes' : 'No'}</td>
+                                    <td>{item.mainCategory}</td>
+                                    <td>{item.subCategory}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+
+
+                </div>
+            ) : <></>}
         </div>
     );
 };

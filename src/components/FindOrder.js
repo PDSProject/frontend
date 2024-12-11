@@ -36,7 +36,7 @@ const FindOrder = () => {
                 <button onClick={handleSearch}>Search</button>
             </div>
 
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+            {error && <p style={{ color: 'black' }}>{error}</p>}
 
             {items.length > 0 && (
                 <table border="1">

@@ -17,7 +17,7 @@ function Home() {
                 </Container>
             </Navbar>
             <br />
-            <Navbar className="bg-body-tertiary">
+            {/* <Navbar className="bg-body-tertiary">
                 <Container>
                     <Navbar.Brand href="/searchitems">Search Items By Category</Navbar.Brand>
                 </Container>
@@ -28,22 +28,48 @@ function Home() {
                     <Navbar.Brand href="/itemsatlocation">Find Items By Location</Navbar.Brand>
                 </Container>
             </Navbar>
-            <br />
+            <br /> */}
             <Navbar className="bg-body-tertiary">
                 <Container>
                     <Navbar.Brand href="/deleteitem">Delete Item By ID</Navbar.Brand>
                 </Container>
             </Navbar>
             <br />
-            <Navbar className="bg-body-tertiary">
+            {/* <Navbar className="bg-body-tertiary">
                 <Container>
                     <Navbar.Brand href="/allavailableitems">All Available Items</Navbar.Brand>
+                </Container>
+            </Navbar>
+            <br /> */}
+
+            <Navbar className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand href="/findorder">Find Order</Navbar.Brand>
                 </Container>
             </Navbar>
             <br />
             <Navbar className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="/findorder">Find Order</Navbar.Brand>
+                    <Navbar.Brand href="/startorder">Start Order</Navbar.Brand>
+                </Container>
+            </Navbar>
+            <br />
+            <Navbar className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand href="/addtoorder">Add to Order</Navbar.Brand>
+                </Container>
+            </Navbar>
+            <br />
+            <Navbar className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand href="/myorder">My Orders</Navbar.Brand>
+                </Container>
+            </Navbar>
+            <br />
+
+            <Navbar className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand href="/prepareorder">Prepare Order</Navbar.Brand>
                 </Container>
             </Navbar>
             <br />
@@ -59,12 +85,7 @@ function Home() {
                 </Container>
             </Navbar>
             <br />
-            <Navbar className="bg-body-tertiary">
-                <Container>
-                    <Navbar.Brand href="/startorder">Start Order</Navbar.Brand>
-                </Container>
-            </Navbar>
-            <br />
+
             <Navbar className="bg-body-tertiary">
                 <Container>
                     <button onClick={handleLogout}>Logout</button>

@@ -8,7 +8,7 @@ function FindItem() {
     const handleFindItem = () => {
         axios.get(`http://localhost:8000/find/find-item/${itemID}`)
             .then(res => setResults(res.data))
-            .catch(err => alert('Error fetching item data'));
+            .catch(err => alert(err.response.data))
     };
 
     return (
